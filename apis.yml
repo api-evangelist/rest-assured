@@ -1,0 +1,38 @@
+aid: rest-assured
+name: REST Assured
+description: >-
+  REST Assured is a Java library for testing and validating RESTful APIs with a fluent domain-specific language for HTTP requests and response assertions.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Testing
+  - Functional Testing
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/apis.yml
+created: '2026-03-25'
+modified: '2026-03-25'
+specificationVersion: '0.19'
+apis:
+  - aid: rest-assured:rest-assured
+    name: REST Assured
+    description: >-
+      REST Assured is a Java library for testing and validating RESTful APIs with a fluent domain-specific language for HTTP requests and response assertions.
+    humanURL: https://rest-assured.io
+    tags:
+      - Testing
+      - Functional Testing
+    properties:
+      - type: Documentation
+        url: https://rest-assured.io/#docs
+      - type: GitHub Repository
+        url: https://github.com/rest-assured/rest-assured
+common:
+  - type: Website
+    url: https://rest-assured.io
+  - type: Documentation
+    url: https://rest-assured.io/#docs
+  - type: GitHub Organization
+    url: https://github.com/rest-assured/rest-assured
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
