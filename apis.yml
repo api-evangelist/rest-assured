@@ -5,8 +5,8 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Testing
   - Functional Testing
+  - Testing
 url: >-
   https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/apis.yml
 created: '2026-03-25'
@@ -19,8 +19,8 @@ apis:
       REST Assured is a Java library for testing and validating RESTful APIs with a fluent domain-specific language for HTTP requests and response assertions.
     humanURL: https://rest-assured.io
     tags:
-      - Testing
       - Functional Testing
+      - Testing
     properties:
       - type: Documentation
         url: https://rest-assured.io/#docs
