@@ -1,0 +1,119 @@
+vocabulary:
+  name: REST Assured Vocabulary
+  description: >-
+    Domain vocabulary for REST Assured, the Java DSL library for testing and
+    validating RESTful APIs. Covers the BDD test structure, request and response
+    specification concepts, assertion patterns, and integration capabilities.
+  created: '2026-05-02'
+  modified: '2026-05-02'
+  terms:
+    - term: Given-When-Then
+      definition: >-
+        The BDD (Behavior-Driven Development) pattern used by REST Assured to
+        structure API tests. Given() sets up the request specification, when()
+        executes the HTTP request, and then() asserts the response.
+      tags:
+        - BDD
+        - Test Pattern
+    - term: RequestSpecification
+      definition: >-
+        The REST Assured object built in the given() clause that defines the
+        request configuration including base URI, headers, query parameters,
+        path parameters, body, content type, and authentication.
+      tags:
+        - API
+        - Request
+    - term: ResponseSpecification
+      definition: >-
+        The REST Assured object built in the then() clause that defines expected
+        response properties including status code, content type, headers, body
+        assertions, and response time constraints.
+      tags:
+        - API
+        - Response
+    - term: JsonPath
+      definition: >-
+        A query language for JSON used by REST Assured to extract and assert
+        values from JSON response bodies using path expressions like
+        users[0].name or data.items.size().
+      tags:
+        - Assertion
+        - JSON
+    - term: XmlPath
+      definition: >-
+        A query language for XML used by REST Assured to extract and assert
+        values from XML response bodies using XPath-like expressions.
+      tags:
+        - Assertion
+        - XML
+    - term: RequestSpecBuilder
+      definition: >-
+        A builder class in REST Assured for constructing reusable
+        RequestSpecification objects that can be shared across multiple tests
+        as a base specification.
+      tags:
+        - API
+        - Builder Pattern
+    - term: ResponseSpecBuilder
+      definition: >-
+        A builder class in REST Assured for constructing reusable
+        ResponseSpecification objects that can be shared across multiple tests
+        for common assertion sets.
+      tags:
+        - API
+        - Builder Pattern
+    - term: Filter
+      definition: >-
+        A REST Assured interface for intercepting and modifying requests and
+        responses. Filters can add logging, authentication, request signing,
+        or response transformation.
+      tags:
+        - API
+        - Extension
+    - term: Spring MockMvc
+      definition: >-
+        REST Assured integration with Spring's MockMvc that allows testing
+        Spring MVC controllers without starting a full HTTP server, using the
+        same REST Assured DSL syntax.
+      tags:
+        - Integration
+        - Spring
+    - term: DSL
+      definition: >-
+        Domain-Specific Language. REST Assured's fluent, method-chaining API
+        design that makes test code readable and self-documenting, resembling
+        natural language descriptions of HTTP interactions.
+      tags:
+        - Language
+        - Design
+    - term: Hamcrest Matcher
+      definition: >-
+        A matcher framework integrated with REST Assured for writing expressive
+        assertions on response values, supporting operations like equalTo(),
+        containsString(), hasItems(), and greaterThan().
+      tags:
+        - Assertion
+        - Library
+    - term: OAuth2
+      definition: >-
+        An authorization framework supported natively by REST Assured for
+        authenticating test requests using bearer tokens, authorization codes,
+        or client credentials grant flows.
+      tags:
+        - Security
+        - Authentication
+    - term: Path Parameter
+      definition: >-
+        A variable segment in a URI template (e.g., /users/{id}) replaced with
+        an actual value in REST Assured using the pathParam() method.
+      tags:
+        - Request
+        - URI
+    - term: Relaxed HTTPS Validation
+      definition: >-
+        A REST Assured configuration option that disables SSL certificate
+        validation, useful for testing against servers with self-signed
+        certificates in development environments.
+      tags:
+        - Security
+        - Configuration

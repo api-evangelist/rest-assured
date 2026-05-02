@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rest-assured.io/schemas/response",
+  "title": "REST Assured Response Specification",
+  "description": "Schema for a REST Assured response validation specification, representing the then() clause of a REST Assured test.",
+  "type": "object",
+  "properties": {
+    "statusCode": {
+      "type": "integer",
+      "minimum": 100,
+      "maximum": 599,
+      "description": "Expected HTTP status code of the response."
+    },
+    "contentType": {
+      "type": "string",
+      "description": "Expected Content-Type of the response.",
+      "examples": ["application/json", "application/xml"]
+    },
+    "headers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Expected HTTP response headers and their values."
+    },
+    "body": {
+      "type": "object",
+      "description": "Expected body assertions using JSONPath expressions.",
+      "additionalProperties": true
+    },
+    "responseTime": {
+      "type": "object",
+      "description": "Response time constraint.",
+      "properties": {
+        "lessThan": {
+          "type": "integer",
+          "description": "Maximum acceptable response time in milliseconds."
+        },
+        "greaterThan": {
+          "type": "integer",
+          "description": "Minimum acceptable response time in milliseconds."
+        }
+      }
+    },
+    "cookies": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Expected cookies in the response."
+    }
+  }
+}

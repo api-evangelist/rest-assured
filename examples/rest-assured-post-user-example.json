@@ -1,0 +1,31 @@
+{
+  "description": "REST Assured example: POST request to create a resource with request body and response validation.",
+  "language": "java",
+  "library": "io.rest-assured:rest-assured:6.0.0",
+  "pattern": "given-when-then",
+  "request": {
+    "method": "POST",
+    "baseUri": "https://api.example.com",
+    "path": "/v1/users",
+    "headers": {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "Authorization": "Bearer {{ACCESS_TOKEN}}"
+    },
+    "body": {
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "role": "developer"
+    }
+  },
+  "response": {
+    "statusCode": 201,
+    "contentType": "application/json",
+    "bodyAssertions": {
+      "$.name": "John Smith",
+      "$.email": "john.smith@example.com",
+      "$.id": "present"
+    }
+  },
+  "javaCode": "import static io.restassured.RestAssured.*;\nimport static org.hamcrest.Matchers.*;\nimport io.restassured.http.ContentType;\n\nString requestBody = \"{\\\"name\\\": \\\"John Smith\\\", \\\"email\\\": \\\"john.smith@example.com\\\", \\\"role\\\": \\\"developer\\\"}\";\n\ngiven()\n    .baseUri(\"https://api.example.com\")\n    .contentType(ContentType.JSON)\n    .header(\"Authorization\", \"Bearer \" + accessToken)\n    .body(requestBody)\n.when()\n    .post(\"/v1/users\")\n.then()\n    .statusCode(201)\n    .body(\"name\", equalTo(\"John Smith\"))\n    .body(\"email\", equalTo(\"john.smith@example.com\"))\n    .body(\"id\", notNullValue());"
+}

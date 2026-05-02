@@ -1,0 +1,105 @@
+{
+  "name": "REST Assured Request Specification",
+  "description": "Structure of a REST Assured HTTP request specification used in the given() clause.",
+  "fields": [
+    {
+      "name": "baseUri",
+      "type": "string",
+      "format": "uri",
+      "required": false,
+      "description": "Base URI for the API under test."
+    },
+    {
+      "name": "basePath",
+      "type": "string",
+      "required": false,
+      "description": "Base path appended to the base URI."
+    },
+    {
+      "name": "port",
+      "type": "integer",
+      "required": false,
+      "description": "Port number for the API under test."
+    },
+    {
+      "name": "headers",
+      "type": "object",
+      "required": false,
+      "description": "HTTP request headers as key-value pairs."
+    },
+    {
+      "name": "queryParameters",
+      "type": "object",
+      "required": false,
+      "description": "Query parameters appended to the request URL."
+    },
+    {
+      "name": "pathParameters",
+      "type": "object",
+      "required": false,
+      "description": "Path parameter values for URI templates."
+    },
+    {
+      "name": "body",
+      "type": "any",
+      "required": false,
+      "description": "Request body payload (JSON object, array, or string)."
+    },
+    {
+      "name": "contentType",
+      "type": "string",
+      "required": false,
+      "description": "Content-Type header value for the request body."
+    },
+    {
+      "name": "accept",
+      "type": "string",
+      "required": false,
+      "description": "Accept header value for desired response format."
+    },
+    {
+      "name": "authentication",
+      "type": "object",
+      "required": false,
+      "description": "Authentication configuration (type, credentials).",
+      "fields": [
+        {
+          "name": "type",
+          "type": "string",
+          "required": true,
+          "description": "Authentication type: basic, digest, oauth2, preemptive, certificate."
+        },
+        {
+          "name": "username",
+          "type": "string",
+          "required": false,
+          "description": "Username for basic or digest auth."
+        },
+        {
+          "name": "password",
+          "type": "string",
+          "required": false,
+          "description": "Password for basic or digest auth."
+        },
+        {
+          "name": "token",
+          "type": "string",
+          "required": false,
+          "description": "Bearer token for OAuth2."
+        }
+      ]
+    },
+    {
+      "name": "cookies",
+      "type": "object",
+      "required": false,
+      "description": "Cookies to send with the request."
+    },
+    {
+      "name": "timeout",
+      "type": "integer",
+      "required": false,
+      "description": "Connection timeout in milliseconds."
+    }
+  ]
+}

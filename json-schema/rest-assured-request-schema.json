@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rest-assured.io/schemas/request",
+  "title": "REST Assured Request Specification",
+  "description": "Schema for a REST Assured HTTP request specification, representing the given() clause of a REST Assured test.",
+  "type": "object",
+  "properties": {
+    "baseUri": {
+      "type": "string",
+      "format": "uri",
+      "description": "The base URI for the API under test."
+    },
+    "basePath": {
+      "type": "string",
+      "description": "The base path appended to the base URI."
+    },
+    "port": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535,
+      "description": "The port number for the API under test."
+    },
+    "headers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "HTTP headers to include in the request."
+    },
+    "queryParameters": {
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "string" },
+          { "type": "number" },
+          { "type": "boolean" }
+        ]
+      },
+      "description": "Query parameters to append to the request URL."
+    },
+    "pathParameters": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Path parameter values for URI templates."
+    },
+    "body": {
+      "description": "The request body payload.",
+      "oneOf": [
+        { "type": "object" },
+        { "type": "array" },
+        { "type": "string" }
+      ]
+    },
+    "contentType": {
+      "type": "string",
+      "description": "The Content-Type header value for the request body.",
+      "examples": ["application/json", "application/xml", "multipart/form-data"]
+    },
+    "accept": {
+      "type": "string",
+      "description": "The Accept header value specifying the desired response format.",
+      "examples": ["application/json", "application/xml"]
+    },
+    "authentication": {
+      "$ref": "#/$defs/Authentication"
+    },
+    "cookies": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Cookies to send with the request."
+    },
+    "timeout": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Connection timeout in milliseconds."
+    }
+  },
+  "$defs": {
+    "Authentication": {
+      "title": "Authentication",
+      "description": "Authentication configuration for the request.",
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["basic", "digest", "oauth2", "preemptive", "certificate"],
+          "description": "The authentication scheme to use."
+        },
+        "username": {
+          "type": "string",
+          "description": "Username for basic or digest authentication."
+        },
+        "password": {
+          "type": "string",
+          "description": "Password for basic or digest authentication."
+        },
+        "token": {
+          "type": "string",
+          "description": "Bearer token for OAuth2 authentication."
+        },
+        "keystorePath": {
+          "type": "string",
+          "description": "Path to the keystore file for certificate authentication."
+        },
+        "keystorePassword": {
+          "type": "string",
+          "description": "Password for the keystore file."
+        }
+      }
+    }
+  }
+}

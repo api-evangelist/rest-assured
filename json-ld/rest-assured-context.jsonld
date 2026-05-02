@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "ra": "https://rest-assured.io/vocab#",
+    "SoftwareApplication": "SoftwareApplication",
+    "SoftwareSourceCode": "SoftwareSourceCode",
+    "name": "name",
+    "description": "description",
+    "url": "url",
+    "codeRepository": "codeRepository",
+    "programmingLanguage": "programmingLanguage",
+    "license": "license",
+    "version": "softwareVersion",
+    "TestSpecification": {
+      "@id": "ra:TestSpecification",
+      "@type": "rdfs:Class"
+    },
+    "RequestSpecification": {
+      "@id": "ra:RequestSpecification",
+      "@type": "rdfs:Class"
+    },
+    "ResponseSpecification": {
+      "@id": "ra:ResponseSpecification",
+      "@type": "rdfs:Class"
+    },
+    "Assertion": {
+      "@id": "ra:Assertion",
+      "@type": "rdfs:Class"
+    },
+    "JsonPath": {
+      "@id": "ra:JsonPath",
+      "@type": "rdfs:Class"
+    },
+    "XmlPath": {
+      "@id": "ra:XmlPath",
+      "@type": "rdfs:Class"
+    },
+    "Authentication": {
+      "@id": "ra:Authentication",
+      "@type": "rdfs:Class"
+    },
+    "given": {
+      "@id": "ra:given"
+    },
+    "when": {
+      "@id": "ra:when"
+    },
+    "then": {
+      "@id": "ra:then"
+    },
+    "statusCode": {
+      "@id": "ra:statusCode"
+    },
+    "header": {
+      "@id": "ra:header"
+    },
+    "body": {
+      "@id": "ra:body"
+    },
+    "queryParam": {
+      "@id": "ra:queryParam"
+    },
+    "pathParam": {
+      "@id": "ra:pathParam"
+    },
+    "authentication": {
+      "@id": "ra:authentication",
+      "@type": "ra:Authentication"
+    }
+  }
+}

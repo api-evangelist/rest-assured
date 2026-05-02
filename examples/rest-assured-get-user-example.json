@@ -1,0 +1,28 @@
+{
+  "description": "REST Assured example: GET request with JSONPath assertion using given-when-then pattern.",
+  "language": "java",
+  "library": "io.rest-assured:rest-assured:6.0.0",
+  "pattern": "given-when-then",
+  "request": {
+    "method": "GET",
+    "baseUri": "https://api.example.com",
+    "path": "/v1/users/{id}",
+    "pathParameters": {
+      "id": "42"
+    },
+    "headers": {
+      "Accept": "application/json",
+      "Authorization": "Bearer {{ACCESS_TOKEN}}"
+    }
+  },
+  "response": {
+    "statusCode": 200,
+    "contentType": "application/json",
+    "bodyAssertions": {
+      "$.id": 42,
+      "$.name": "Jane Doe",
+      "$.email": "jane.doe@example.com"
+    }
+  },
+  "javaCode": "import static io.restassured.RestAssured.*;\nimport static org.hamcrest.Matchers.*;\n\ngiven()\n    .baseUri(\"https://api.example.com\")\n    .header(\"Authorization\", \"Bearer \" + accessToken)\n    .pathParam(\"id\", 42)\n.when()\n    .get(\"/v1/users/{id}\")\n.then()\n    .statusCode(200)\n    .contentType(ContentType.JSON)\n    .body(\"id\", equalTo(42))\n    .body(\"name\", equalTo(\"Jane Doe\"))\n    .body(\"email\", equalTo(\"jane.doe@example.com\"));"
+}
