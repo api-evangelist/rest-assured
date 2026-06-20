@@ -12,7 +12,7 @@ description: >-
   distributed via Maven Central under the io.rest-assured group ID and is used
   by tens of thousands of development teams for API automation testing.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Functional Testing
   - Testing
