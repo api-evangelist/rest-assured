@@ -58,19 +58,19 @@ apis:
         url: http://www.javadoc.io/doc/io.rest-assured/rest-assured/latest
       - type: Maven Central
         url: https://central.sonatype.com/artifact/io.rest-assured/rest-assured
-      - type: JSON Schema
+      - type: JSONSchema
         url: >-
           https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/json-schema/rest-assured-request-schema.json
-      - type: JSON Schema
+      - type: JSONSchema
         url: >-
           https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/json-schema/rest-assured-response-schema.json
-      - type: JSON Structure
+      - type: JSONStructure
         url: >-
           https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/json-structure/rest-assured-request-structure.json
-      - type: Example
+      - type: Examples
         url: >-
           https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/examples/rest-assured-get-user-example.json
-      - type: Example
+      - type: Examples
         url: >-
           https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/examples/rest-assured-post-user-example.json
 common:
@@ -85,7 +85,7 @@ common:
   - type: Vocabulary
     url: >-
       https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/vocabulary/rest-assured-vocabulary.yml
-  - type: JSON-LD Context
+  - type: JSONLDContext
     url: >-
       https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/json-ld/rest-assured-context.jsonld
 maintainers:
