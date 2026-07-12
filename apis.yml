@@ -74,6 +74,8 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/examples/rest-assured-post-user-example.json
 common:
+  - type: DomainSecurity
+    url: security/rest-assured-domain-security.yml
   - type: Website
     url: https://rest-assured.io
   - type: Documentation
