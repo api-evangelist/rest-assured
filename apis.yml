@@ -86,6 +86,9 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/examples/rest-assured-post-user-example.json
 common:
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/rest-assured/rest-assured/blob/master/LICENSE
   - type: DomainSecurity
     url: security/rest-assured-domain-security.yml
   - type: Website
