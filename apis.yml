@@ -99,6 +99,12 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/rest-assured/refs/heads/main/examples/rest-assured-post-user-example.json
 common:
+  - type: Plans
+    url: plans/rest-assured-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/rest-assured-rate-limits.yml
+  - type: FinOps
+    url: finops/rest-assured-finops.yml
   - type: IssueTracker
     url: https://github.com/rest-assured/rest-assured/issues
   - type: SecurityPolicy
