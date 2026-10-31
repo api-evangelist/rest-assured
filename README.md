@@ -64,81 +64,142 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-REST Assured is a Java library for simplifying the testing and validation of RESTful APIs. It provides a fluent domain-specific language (DSL) built on the given-when-then BDD pattern, making it easy to write readable and maintainable API tests. REST Assured supports HTTP methods GET, POST, PUT, DELETE, OPTIONS, PATCH, and HEAD, along with JSON and XML response validation, JSONPath and XmlPath parsing, multiple authentication schemes, Spring MockMvc integration, and full request/response logging. Version 6.0.0 (December 2025) requires Java 17+ and integrates with Groovy 5, Spring 7, and Jackson 3.
+REST Assured is a Java library for simplifying the testing and validation of RESTful APIs. It provides a fluent domain-specific language (DSL) built on the given-when-then BDD pattern, making it easy to write readable and maintainable API tests. REST Assured supports HTTP methods GET, POST, PUT, DELETE, OPTIONS, PATCH, and HEAD, along with JSON and XML response validation, JSONPath and XmlPath parsing, multiple authentication schemes, Spring MockMvc integration, and full request/response logging. Version 6.0.0 requires Java 17+ and integrates with Groovy 5, Spring 7, and Jackson 3. The library is distributed via Maven Central under the io.rest-assured group ID and is used by tens of thousands of development teams for API automation testing.
 
-**Website:** [rest-assured.io](https://rest-assured.io)  
-**GitHub:** [github.com/rest-assured/rest-assured](https://github.com/rest-assured/rest-assured)  
-**Maven Central:** `io.rest-assured:rest-assured`
+**Areas:** Functional Testing · Testing · Java · API Testing · Automation · Developer Tools
 
-## Tags
+## REST Assured on APIs.io
 
-`Functional Testing` `Testing` `Java` `API Testing` `Automation` `BDD` `DSL`
+Everything profiled for REST Assured is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/rest-assured/](https://apis.io/providers/rest-assured/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (1)
 
-- **Created:** 2026-03-25
-- **Modified:** 2026-05-02
+- [REST Assured](https://apis.io/apis/rest-assured/rest-assured/) — REST Assured is a Java DSL library for testing and validating RESTful APIs using a fluent, BDD-style syntax with given-when-then patterns. It supports HTTP…
 
-## APIs
+### Published properties
 
-| Name | Description | URL |
-|---|---|---|
-| REST Assured | Java DSL for testing and validating RESTful APIs | [rest-assured.io](https://rest-assured.io) |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Artifacts
+#### JSON Schema (2)
 
-| Type | Name | Link |
-|---|---|---|
-| Documentation | Official Docs | [rest-assured.io/#docs](https://rest-assured.io/#docs) |
-| Getting Started | Wiki — GettingStarted | [GitHub Wiki](https://github.com/rest-assured/rest-assured/wiki/GettingStarted) |
-| Usage Guide | Wiki — Usage | [GitHub Wiki](https://github.com/rest-assured/rest-assured/wiki/Usage) |
-| JSON Schema | Request Specification Schema | [json-schema/rest-assured-request-schema.json](json-schema/rest-assured-request-schema.json) |
-| JSON Schema | Response Specification Schema | [json-schema/rest-assured-response-schema.json](json-schema/rest-assured-response-schema.json) |
-| JSON Structure | Request Structure | [json-structure/rest-assured-request-structure.json](json-structure/rest-assured-request-structure.json) |
-| JSON-LD Context | REST Assured Context | [json-ld/rest-assured-context.jsonld](json-ld/rest-assured-context.jsonld) |
-| Vocabulary | REST Assured Vocabulary | [vocabulary/rest-assured-vocabulary.yml](vocabulary/rest-assured-vocabulary.yml) |
-| Example | GET Request Example | [examples/rest-assured-get-user-example.json](examples/rest-assured-get-user-example.json) |
-| Example | POST Request Example | [examples/rest-assured-post-user-example.json](examples/rest-assured-post-user-example.json) |
+The data models the API reads and writes.
 
-## Quick Example
+- [REST Assured Request Specification](https://apis.io/schemas/rest-assured/rest-assured-request/)
+- [REST Assured Response Specification](https://apis.io/schemas/rest-assured/rest-assured-response/)
 
-```java
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
+#### JSON Structure (1)
 
-given()
-    .baseUri("https://api.example.com")
-    .header("Authorization", "Bearer " + token)
-    .pathParam("id", 42)
-.when()
-    .get("/v1/users/{id}")
-.then()
-    .statusCode(200)
-    .body("name", equalTo("Jane Doe"))
-    .body("email", notNullValue());
-```
+Data models expressed in JSON Structure.
 
-## Key Features
+- [Rest Assured Request Structure](https://apis.io/json-structure/rest-assured/rest-assured-request-structure/)
 
-- **Given-When-Then BDD pattern** for readable test structure
-- **JSONPath and XmlPath** for response parsing and assertion
-- **Spring MockMvc integration** for testing without an HTTP server
-- **Multiple authentication schemes** — Basic, Digest, OAuth2, Certificate
-- **Request/Response logging** for debugging
-- **Hamcrest matchers** for expressive assertions
-- **RequestSpecBuilder and ResponseSpecBuilder** for reusable specifications
+#### JSON-LD (1)
 
-## Maven Dependency
+Linked-data contexts for the provider's vocabulary.
 
-```xml
-<dependency>
-    <groupId>io.rest-assured</groupId>
-    <artifactId>rest-assured</artifactId>
-    <version>6.0.0</version>
-    <scope>test</scope>
-</dependency>
-```
+- [Rest Assured Context](https://apis.io/jsonld/rest-assured/rest-assured-context/)
 
-## Maintainers
+#### Vocabulary (1)
 
-**Kin Lane** — kin@apievangelist.com
+The provider's domain terms, defined.
+
+- [REST Assured Vocabulary](https://apis.io/vocabularies/rest-assured/rest-assured-vocabulary/)
+
+#### Examples (2)
+
+Example requests and responses.
+
+- [Rest Assured Get User Example](https://apis.io/examples/rest-assured/rest-assured-get-user-example/)
+- [Rest Assured Post User Example](https://apis.io/examples/rest-assured/rest-assured-post-user-example/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [REST Assured — jsonschema rules](https://apis.io/rules/rest-assured/rest-assured-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Rest Assured Domain Security](https://apis.io/security/rest-assured/rest-assured-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Rest Assured Plans Pricing](https://apis.io/plans/rest-assured/rest-assured-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Rest Assured Rate Limits](https://apis.io/rate-limits/rest-assured/rest-assured-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Rest Assured Finops](https://apis.io/finops/rest-assured/rest-assured-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://rest-assured.io)
+- [Documentation](https://rest-assured.io/#docs)
+- [Support](http://groups.google.com/group/rest-assured)
+- [GitHub](https://github.com/rest-assured)
+
+## API Evangelist rating
+
+**Kin Score 27.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 33.2 |
+| Contract governance | 23.5 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 7.9 |
+
+**Agent readiness 1.9** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/rest-assured/](https://apis.io/providers/rest-assured/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for REST Assured: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/rest-assured/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
